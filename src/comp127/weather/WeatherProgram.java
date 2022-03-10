@@ -88,7 +88,8 @@ public class WeatherProgram {
     private List<WeatherWidget> createWidgets(double size) {
         return List.of(
             new ForecastWidget(size),
-            new TemperatureWidget(size),  
+            new TemperatureWidget(size), 
+            new WindWidget(size),
             new CloudWidget(size));
     }
 
