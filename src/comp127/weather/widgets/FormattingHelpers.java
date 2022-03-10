@@ -3,6 +3,7 @@ package comp127.weather.widgets;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Utilities to help widgets convert numbers and dates to strings.
@@ -12,7 +13,7 @@ public class FormattingHelpers {
     /**
      * Converts a number to a string with one digit past the decimal point, e.g. "312.3".
      */
-    public static final DecimalFormat ONE_DECIMAL_PLACE = new DecimalFormat("#0.0");
+    private static final DecimalFormat ONE_DECIMAL_PLACE = new DecimalFormat("#0.0");
 
     /**
      * Converts a date to a string showing the date and day of week in abbreviated form,
@@ -25,5 +26,33 @@ public class FormattingHelpers {
      */
     public static final DateFormat TIME_OF_DAY = new SimpleDateFormat("h:mm a");
 
-    // TODO: Add any other static helper methods your widgets might want to share
+    /**
+     * These methods below were built to account for value "null"
+     */
+    public static String formatOneDecimal(Double d) {
+        if (d == null) {
+            return "-";
+        }
+        else {
+            return ONE_DECIMAL_PLACE.format(d);
+        }
+    }
+
+    public static String formatDate(Date d) {
+        if (d == null) {
+            return "-";
+        }
+        else {
+            return WEEKDAY_AND_NAME.format(d);
+        }
+    }
+
+    public static String formatTime(Date d) {
+        if (d == null) {
+            return "-";
+        }
+        else {
+            return TIME_OF_DAY.format(d);
+        }
+    }   
 }

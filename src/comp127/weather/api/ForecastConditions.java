@@ -22,6 +22,7 @@ public class ForecastConditions extends Conditions {
     /**
      * For fetching from API
      */
+    
     ForecastConditions(HourlyForecast.Forecast rawForecast) {
         predictionTime = rawForecast.getDateTime();
         if (rawForecast.hasCloudsInstance()) {
