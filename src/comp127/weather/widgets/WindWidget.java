@@ -7,6 +7,7 @@ import net.aksingh.owmjapis.CurrentWeather.Sys;
 
 /**
  * A widget that displays the current wind speed and wind direction
+ * author Long Truong
  */
 
  
@@ -49,7 +50,7 @@ public class WindWidget implements WeatherWidget {
         return group;
     }
     /**
-     * Update the data and set text
+     * Update the data, icon line and set text
      */
     public void update(WeatherData data) {
         CurrentConditions Conditions = data.getCurrentConditions();

@@ -11,17 +11,17 @@ import java.util.List;
 /**
  * Create multiple instances of a single widget at a variety of different sizes, and feeds the
  * instances varied test conditions.
+ * Note: there are edge cases (seed = 23) that makes the errors pop up. But the test still runs correctly
  */
 public class SingleWidgetTest {
 
     private static WeatherWidget makeWidget(double size) {
         // Replace TemperatureWidget with your own widget to test
         //         ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
-        // return new ForecastWidget(size);
-        // return new ForecastWidget(size);
+        return new ForecastWidget(size);
         // return new TemperatureWidget(size);
         // return new WidgetPt5(size);
-        return new WindWidget(size);
+        // return new WindWidget(size);
     }
 
     // –––––– Test code ––––––

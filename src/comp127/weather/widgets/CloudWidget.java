@@ -67,6 +67,7 @@ public class CloudWidget implements WeatherWidget {
         updateLayout();
     }
 
+    /** What the description says */
     private String cloudDescription(double cc) {
         if (cc <= 33) {
             return "(Not so cloudy !)";

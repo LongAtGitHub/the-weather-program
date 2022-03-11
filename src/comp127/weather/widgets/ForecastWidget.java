@@ -74,6 +74,7 @@ public class ForecastWidget implements WeatherWidget {
         return group;
     }
 
+    /** Update the timeline data */
     public void update(WeatherData data) {
         // Remove all the existing elements from boxGroup.
         boxGroup.removeAll();
@@ -125,8 +126,8 @@ public class ForecastWidget implements WeatherWidget {
         updateLayout();
     }
     
+    /** Place all elements in correct positions */
     private void updateLayout() {
-        // Place all the elements on the canvas in the correct position
         boxGroup.setCenter(0.5 * size, 0.9 * size);
 
         icon.setCenter(0.5 * size, 0.3 * size);
